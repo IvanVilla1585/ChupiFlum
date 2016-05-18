@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+  {% block content %}
+
+    <table >
+      <div class="content_list">
+        <thead>
+          <tr>
+            <th>Nombre Producto</th>
+            <th>Descripción</th>
+            <th>Categoria</th>
+            <th>Costo Producción</th>
+            <th>Precio Venta</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for producto in object_list %}
+            <tr>
+              <td>{{ producto.nombre }}</td>
+              <td>{{ producto.descripcion }}</td>
+              <td>{{ producto.categoria }}</td>
+              <td>{{ producto.costo }}</td>
+              <td>{{ producto.precio }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endblock %}
